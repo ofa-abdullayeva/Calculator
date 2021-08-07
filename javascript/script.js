@@ -48,8 +48,9 @@ buttons.forEach((element)=>{
                     problem.innerHTML.slice(-1) == " "/*en son da olan boslukmu?*/ 
                     ? problem.innerHTML.slice(0,-2) /* boslukdusa 2 karakter sil*/
                     :problem.innerHTML.slice(0,-1) /* deyilse 1 karakter sil*/
+                    problem.innerHTML = "0";
                 }else{
-                    problem.innerHTML="0"
+                    problem.innerHTML="0";
                 }
                 break;
 
@@ -68,4 +69,5 @@ buttons.forEach((element)=>{
 calc.addEventListener("click",()=>{
     result.innerHTML = problem.innerHTML;
     problem.innerHTML = eval(problem.innerHTML);
+    
 })
